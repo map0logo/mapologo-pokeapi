@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Search Results</h1>
+
+<div>
+
+    {% for pokemon in pokemon_list %}
+
+    <v-card :loading="loading" class="mx-auto my-12" max-width="374">
+        <v-card-title> {{ pokemon.name }}</v-card-title>
+        <v-card-text> {{ pokemon.id }} </v-card-text>
+        <v-chip>height: {{ pokemon.height }}</v-chip>
+        <v-chip>height: {{ pokemon.weight }}</v-chip>
+        <v-img src="{{ pokemon.sprite_url }}"></v-img>
+    </v-card>
+
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

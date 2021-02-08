@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-h4">
+    <a href="/">
+        <v-icon large color="red darken-2">
+            mdi-home
+        </v-icon>
+    </a>Mapologo's Pokemon Search
+</div>
+<v-form v-model="valid" action="{% url 'search_results' %}" method="get">
+    <v-container>
+        <v-row>
+            <v-col cols="12" md="4">
+                <v-text-field v-model="pokemonname" :rules="nameRules" :counter="10" label="Pokemon name" required
+                    name="q" placeholder="Search..."></v-text-field>
+            </v-col>
+        </v-row>
+    </v-container>
+</v-form>
+{% endblock %}
