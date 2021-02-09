@@ -132,3 +132,7 @@ dmypy.json
 .vscode/
 
 pokemap/public/static/
+
+# requests-cache
+
+pokemap/pokesearch_cache.sqlite
