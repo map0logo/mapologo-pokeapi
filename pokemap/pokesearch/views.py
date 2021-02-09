@@ -25,7 +25,8 @@ class SearchResultsView(ListView):
 
         for obj in object_list:
             pokemon = requests.get(f"https://pokeapi.co/api/v2/pokemon/{obj.id}")
-            obj.sprite_url = pokemon.json()["sprites"]["front_default"]
+            obj.sprite_front = pokemon.json()["sprites"]["front_default"]
             obj.height = pokemon.json()["height"]
             obj.weight = pokemon.json()["weight"]
+            obj.sprite_back = pokemon.json()["sprites"]["back_default"]
         return object_list
