@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'webpack_loader',
-    'pokesearch.apps.PokesearchConfig'
+    'pokesearch.apps.PokesearchConfig',
+    'coverage',
 ]
 
 MIDDLEWARE = [
